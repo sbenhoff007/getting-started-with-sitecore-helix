@@ -1,0 +1,10 @@
+﻿@model Sitecore.Mvc.Presentation.RenderingModel
+@using Sitecore.Mvc
+
+<div>
+    <h1 class="contentTitle">@Html.Sitecore().Field("Title")</h1>
+
+    <div class="contentDescription">
+        @Html.Sitecore().Field("Body Copy")
+    </div>
+</div>

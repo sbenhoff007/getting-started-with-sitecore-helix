@@ -1,0 +1,11 @@
+﻿@model Sitecore.Mvc.Presentation.RenderingModel
+@using Sitecore.Mvc
+
+@{ 
+    Sitecore.Data.Fields.ImageField heroImageField = Model.Item.Fields["Hero Image"];
+    string heroImageUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(heroImageField.MediaItem);
+}
+
+<div id="Header" style="background: white url('@heroImageUrl') no-repeat;background-size: 1170px 402px;">
+    @Html.Sitecore().Field("Hero Logo", Model.Item, new { @id = "scLogo"})
+</div>

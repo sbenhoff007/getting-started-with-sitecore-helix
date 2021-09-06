@@ -1,0 +1,28 @@
+﻿@model Sitecore.Mvc.Presentation.RenderingModel
+@using Sitecore.Mvc
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+	<title>Welcome to Sitecore</title>
+	<link href="/default.css" rel="stylesheet" />
+</head>
+<body>
+	<form id="mainform" method="post" runat="server">
+		<div id="MainPanel">
+			<div id="CenterColumn">
+				<div id="InnerCenter">
+					@Html.Sitecore().Placeholder("hero")
+					<div id="Content">
+						<div id="LeftContent">
+							@Html.Sitecore().Placeholder("main")	
+						</div>
+					</div>
+					<div id="Footer"><hr class="divider" /></div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
